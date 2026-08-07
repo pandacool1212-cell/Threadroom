@@ -19,11 +19,11 @@
    ============================================================================= */
 
 window.THREADROOM_FIREBASE_CONFIG = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_PROJECT.firebaseapp.com",
-  databaseURL: "https://YOUR_PROJECT-default-rtdb.firebaseio.com",
-  projectId: "YOUR_PROJECT",
-  storageBucket: "YOUR_PROJECT.appspot.com",
-  messagingSenderId: "YOUR_SENDER_ID",
-  appId: "YOUR_APP_ID"
+  apiKey: "AIzaSyC9BQIwbVjy6PZD2imMwtR8RKvBsG-DouI",
+  authDomain: "threadroom-cedc6.firebaseapp.com",
+  databaseURL: "https://threadroom-cedc6-default-rtdb.firebaseio.com",
+  projectId: "threadroom-cedc6",
+  storageBucket: "threadroom-cedc6.firebasestorage.app",
+  messagingSenderId: "1048500250775",
+  appId: "1:1048500250775:web:79bd5b496b5bcc007a21d2",
 };
