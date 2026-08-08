@@ -1,0 +1,55 @@
+{
+  "rules": {
+    ".read": false,
+    ".write": false,
+
+    "tr_storage": {
+      "shared": {
+        "$key": {
+          ".read": true,
+          ".write": true,
+          ".validate": "newData.hasChildren(['key','value','updatedAt']) && newData.child('value').isString() && newData.child('value').val().length < 2000000"
+        }
+      },
+      "private": {
+        "$anon": {
+          "$key": {
+            ".read": true,
+            ".write": true,
+            ".validate": "newData.hasChildren(['key','value','updatedAt']) && newData.child('value').isString() && newData.child('value').val().length < 2000000"
+          }
+        }
+      }
+    },
+
+    "tr_chat": {
+      "$topic": {
+        ".read": true,
+        ".write": true,
+        "$msgId": {
+          ".validate": "newData.hasChildren(['f','ts']) && newData.child('f').isString() && newData.child('f').val().length < 6000 && newData.child('ts').isNumber()"
+        }
+      }
+    },
+
+    "tr_draw": {
+      "$room": {
+        ".read": true,
+        ".write": true,
+        "$evId": {
+          ".validate": "newData.hasChildren(['k','from','ts']) && newData.child('ts').isNumber()"
+        }
+      }
+    },
+
+    "tr_photos": {
+      "$room": {
+        "$assetId": {
+          ".read": true,
+          ".write": true,
+          ".validate": "newData.hasChildren(['src','ts']) && newData.child('src').isString() && newData.child('src').val().length < 1500000"
+        }
+      }
+    }
+  }
+}
